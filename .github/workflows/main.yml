@@ -24,7 +24,8 @@ jobs:
           sed -i "s/\${SECRET_ONE}/${{ secrets.DS_ID }}/g" config.json
           sed -i "s/\${SECRET_TWO}/${{ secrets.DS_SEC }}/g" config.json
           sed -i "s/\${SECRET_THREE}/${{ secrets.CF_ACC }}/g" config.json
-      
+          sed -i "s/\${SECRET_FOUR}/${{ secrets.DS_SRV_1 }}/g" config.json
+          
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
         with:
