@@ -3,6 +3,6 @@
     "clientSecret": "${SECRET_TWO}",
     "redirectURL": "https://${SECRET_THREE}.cloudflareaccess.com/cdn-cgi/access/callback",
     "serversToCheckRolesFor": [
-
+        "${SECRET_FOUR}"
     ]
 }
