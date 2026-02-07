@@ -10,6 +10,8 @@ Show them some love!
 
 ## Setup
 
+> **Note:** For detailed local development setup instructions, see [CONTRIBUTING.md](CONTRIBUTING.md)
+
 Requirements:
 - A Cloudflare Access account - make sure you've gone through the onboarding flow and have a `NAME.cloudflareaccess.com` subddomain.
 - A [Discord developer application](https://discord.com/developers/applications) to use for OAuth2.
@@ -88,3 +90,8 @@ This example would allow me to access the application if I was myself on Discord
 If you find a security vulnerability in this repository, do NOT create an Issue or Pull Request. Please contact me through email or message (There are links on my GitHub profile). If you create an issue for an active security vulnerability I will save the information and delete the issue.
 
 Alternatively, you can try out a new GitHub feature for Security Advisories: https://github.com/Erisa/discord-oidc-worker/security
+
+## Contributing
+
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions on setting up your local development environment and submitting pull requests.
+
