@@ -13,12 +13,16 @@ Before you begin, ensure you have the following installed:
 
 ## Local Development Setup
 
-### 1. Clone the Repository
+### 1. Fork and Clone the Repository
+
+First, fork the repository on GitHub, then clone your fork:
 
 ```bash
-git clone https://github.com/tjacobs624/discord-oidc.git
+git clone https://github.com/YOUR_USERNAME/discord-oidc.git
 cd discord-oidc
 ```
+
+Replace `YOUR_USERNAME` with your GitHub username.
 
 ### 2. Install Dependencies
 
@@ -221,7 +225,7 @@ Ensure you've copied `config.sample.json` to `config.json` and filled in your cr
 
 ## Getting Help
 
-- Check existing [Issues](https://github.com/tjacobs624/discord-oidc/issues)
+- Check existing [Issues](../../issues) on GitHub
 - Read the [README](README.md) for usage instructions
 - Review the [Discord API Documentation](https://discord.com/developers/docs)
 
@@ -230,7 +234,7 @@ Ensure you've copied `config.sample.json` to `config.json` and filled in your cr
 If you find a security vulnerability:
 - **DO NOT** create a public issue
 - Contact the maintainer privately (see README for contact info)
-- Use GitHub's [Security Advisories](https://github.com/tjacobs624/discord-oidc/security) feature
+- Use GitHub's [Security Advisories](../../security/advisories) feature
 
 ## License
 
