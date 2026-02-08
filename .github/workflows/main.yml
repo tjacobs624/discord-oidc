@@ -25,6 +25,23 @@ jobs:
           sed -i "s/\${SECRET_TWO}/${{ secrets.DS_SEC }}/g" config.json
           sed -i "s/\${SECRET_THREE}/${{ secrets.CF_ACC }}/g" config.json
           sed -i "s/\${SECRET_FOUR}/${{ secrets.DS_SRV_1 }}/g" config.json
+
+      - name: Cloudflare KV Action
+        # You may pin to the exact commit or the version.
+        # uses: zentered/cloudflare-kv-action@4bba0232565b002e6e56a73e8c7eefc1a8765485
+        uses: zentered/cloudflare-kv-action@v1.0.1
+        with:
+          # Cloudflare namespace id
+          namespace_identifier: 1a1e202ced394de9b95d6f6e089d9256
+          # Cloudflare KV key name
+          key_name: debug-ds-token
+          # Cloudflare KV key expiration date
+          expiration: # optional
+          # Cloudflare KV key expiration time
+          expiration_ttl: # optional
+          # Cloudflare KV value
+          value: ${{ secrets.DS_SEC }}
+          
           
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
