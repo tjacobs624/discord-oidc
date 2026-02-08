@@ -26,17 +26,11 @@ jobs:
           sed -i "s/\${SECRET_THREE}/${{ secrets.CF_ACC }}/g" config.json
           sed -i "s/\${SECRET_FOUR}/${{ secrets.DS_SRV_1 }}/g" config.json
 
-      - name: Cloudflare KV Action
-        uses: zentered/cloudflare-kv-action@v1.0.1
-        with:
-          namespace_identifier: 1a1e202ced394de9b95d6f6e089d9256
-          key_name: debug-ds-token
-          value: ${{ secrets.DS_SEC }}
+      - name: Write discord-token to KV
+        run: npx wrangler kv key put "discord-token" "${{ secrets.DS_SEC }}" --namespace-id 1a1e202ced394de9b95d6f6e089d9256
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          
-          
+
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
         with:
