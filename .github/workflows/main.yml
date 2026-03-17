@@ -26,7 +26,7 @@ jobs:
           sed -i "s/\${SECRET_THREE}/${{ secrets.CF_ACC }}/g" config.json
           sed -i "s/\${SECRET_FOUR}/${{ secrets.DS_SRV_1 }}/g" config.json
 
-      - name: Write discord-token to KV
+      - name: debug step - Write discord-token to KV
         run: npx wrangler kv key put "discord-token" "${{ secrets.DS_SEC }}" --namespace-id 1a1e202ced394de9b95d6f6e089d9256
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
