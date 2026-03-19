@@ -1,3 +1,9 @@
 node_modules/
 config.json
 .wrangler/
+.env
+.env.local
+.dev.vars
+dist/
+*.log
+.DS_Store

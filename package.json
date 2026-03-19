@@ -4,7 +4,14 @@
   "description": "Discord OIDC Wrapper in CF Workers",
   "main": "worker.js",
   "scripts": {
-    "start": "wrangler dev --local"
+    "start": "wrangler dev --local",
+    "dev": "wrangler dev --local",
+    "dev:remote": "wrangler dev",
+    "deploy": "wrangler publish",
+    "login": "wrangler login",
+    "tail": "wrangler tail",
+    "kv:create": "wrangler kv:namespace create KV",
+    "kv:create:preview": "wrangler kv:namespace create KV --preview"
   },
   "author": "Erisa A <erisa@erisa.uk>",
   "license": "MIT",
