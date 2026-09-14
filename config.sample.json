@@ -1,0 +1,9 @@
+{
+    "clientId": "YOUR_DISCORD_APPLICATION_ID",
+    "clientSecret": "YOUR_DISCORD_APPLICATION_SECRET",
+    "redirectURL": "https://YOURNAME.cloudflareaccess.com/cdn-cgi/access/callback",
+    "serversToCheckRolesFor": [
+        "YOUR_SERVER_ID_1",
+        "YOUR_SERVER_ID_2"
+    ]
+}
